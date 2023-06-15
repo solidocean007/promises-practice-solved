@@ -1,4 +1,4 @@
-/** 
+/**
  * PROMISE AFTER PROMISE
  * Please, make sure to read the 04 Promise-after-promise.md file in exercise-info folder
  * This task will allow you to demonstrate an understanding how to chain promises
@@ -6,12 +6,12 @@
  * The code beneath declares the function first() that returns a resolved promise of 3
  * and the second function that returns another resolved promise that resolves with a sum of
  * an argument and 7
-*/
+ */
 
 const first = () => Promise.resolve(3);
 const second = (val) => {
   return Promise.resolve(val + 7);
-}
+};
 
 /**
  * @task
@@ -22,12 +22,11 @@ const second = (val) => {
 
 // Refactor the following code...
 export const handlePromise = first()
-.then((val) => second(val))
-.then((res) => {
-  console.log(res);
-  return(res);
-});
-
+  .then((val) => second(val))
+  .then((res) => {
+    console.log(res);
+    return res;
+  });
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"
