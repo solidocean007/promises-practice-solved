@@ -22,7 +22,7 @@
 export function parsePromised(json) {
   return new Promise((resolve, reject) => {
     try {
-      resolve(parsedJson);
+      resolve(JSON.parse(json));
     } catch (error) {
       reject(error);
     }
